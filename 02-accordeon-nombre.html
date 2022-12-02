@@ -4,9 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+    <title>Accordéon avec des booléens</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
-    <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+    <h1>Accordéon avec un nombre</h1>
+    <div class="accordeon" x-data="{ open: 1 }">
+      <section>
+        <button @click="open = 1">bouton 1</button>
+        <p x-show="open == 1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam at aspernatur officia accusamus? Corporis id non aliquid accusamus illo nobis animi nemo magnam obcaecati ratione? Harum amet voluptatibus maxime iste!</p>
+      </section>
+      <section>
+        <button @click="open = 2">bouton 2</button>
+        <p x-show="open == 2">Aperiam expedita nisi sapiente laborum ut soluta ullam obcaecati incidunt quidem laboriosam repudiandae nihil magni, veritatis sequi corrupti molestias facilis vitae culpa suscipit molestiae autem! Eum libero distinctio assumenda quis.</p>
+      </section>
+      <section>
+        <button @click="open = 3">bouton 3</button>
+        <p x-show="open == 3">Sed enim assumenda exercitationem, saepe expedita quos! Sequi minima obcaecati magni, inventore iure nostrum impedit sint cum amet nisi, qui maiores, similique consequuntur magnam expedita velit dolor beatae voluptatem tempore!</p>
+      </section>
+    </div>
   </body>
 </html>
